@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="1" name="pv260.unittesting.QuickcheckTest" time="5.08" errors="0" skipped="0">
+<testsuite tests="1" failures="1" name="pv260.unittesting.QuickcheckTest" time="4.697" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_65\jre\bin"/>
     <property name="java.vm.version" value="25.65-b01"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Ja\MU\vyuka\Software quality\jaro2017\seminar4-unittesting\UnitTesting"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Ja\MU\vyuka\Software quality\jaro2019\unit-testing\unittesting-fixed\PV260-UnitTesting"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Ja\MU\vyuka\Software quality\jaro2017\seminar4-unittesting\UnitTesting"/>
+    <property name="user.dir" value="C:\Ja\MU\vyuka\Software quality\jaro2019\unit-testing\unittesting-fixed\PV260-UnitTesting"/>
     <property name="java.runtime.version" value="1.8.0_65-b17"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_65\jre\lib\endorsed"/>
@@ -30,7 +30,7 @@
     <property name="maven.ext.class.path" value="C:\utility\netbeans\inst\NetBeans 8.1\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="C:\utility\maven\apache-maven-3.3.9\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_65\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\utility\python\inst-2.7\;C:\utility\python\inst-2.7\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\utility\openvpn\openVPN\bin;C:\Program Files\Calibre2\;C:\utility\git\Git\cmd;C:\utility\git\bin;C:\Program Files\Java\jdk1.8.0_65\bin;C:\utility\maven\apache-maven-3.3.9\bin;C:\Program Files (x86)\Skype\Phone\;C:\texlive\2015\bin\win32;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_65\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\utility\python\inst-2.7\;C:\utility\python\inst-2.7\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\utility\openvpn\openVPN\bin;C:\Program Files\Calibre2\;C:\utility\git\Git\cmd;C:\utility\git\bin;C:\Program Files\Java\jdk1.8.0_65\bin;C:\utility\maven\apache-maven-3.3.9\bin;C:\Program Files (x86)\Skype\Phone\;C:\utility\ParagonExtFs\;C:\Program Files (x86)\PharosSystems\Core;C:\Spnp-Gui\spnp\bin;C:\utility\storageexecutive\inst;C:\Program Files (x86)\Common Files\Acronis\VirtualFile\;C:\Program Files (x86)\Common Files\Acronis\VirtualFile64\;C:\Program Files (x86)\Common Files\Acronis\SnapAPI\;C:\WINDOWS\System32\OpenSSH\;C:\texlive\2015\bin\win32;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -62,13 +62,22 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="pv260.unittesting.QuickcheckTest" name="testSplit" time="5.08">
-    <failure message="Unexpected error in property testSplit with args [)&gt;H
-]" type="java.lang.AssertionError">java.lang.AssertionError: Unexpected error in property testSplit with args [)&gt;H
+  <testcase classname="pv260.unittesting.QuickcheckTest" name="testSplit" time="4.697">
+    <failure message="Property testSplit falsified for args shrunken to [
+]" type="java.lang.AssertionError">java.lang.AssertionError: Property testSplit falsified for args shrunken to [
 ]
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier.reportErrorWithArguments(PropertyVerifier.java:103)
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier.access$300(PropertyVerifier.java:40)
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier$1.evaluate(PropertyVerifier.java:80)
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at pv260.unittesting.QuickcheckTest.testSplit(QuickcheckTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at com.pholser.junit.quickcheck.runner.PropertyVerifier$2.evaluate(PropertyVerifier.java:96)
+	at com.pholser.junit.quickcheck.runner.PropertyVerifier$1.evaluate(PropertyVerifier.java:73)
 	at com.pholser.junit.quickcheck.runner.PropertyVerifier.verify(PropertyVerifier.java:65)
 	at com.pholser.junit.quickcheck.runner.PropertyStatement.verifyProperty(PropertyStatement.java:106)
 	at com.pholser.junit.quickcheck.runner.PropertyStatement.evaluate(PropertyStatement.java:92)
@@ -93,26 +102,6 @@
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: java.util.regex.PatternSyntaxException: Unmatched closing &apos;)&apos;
-)
-	at java.util.regex.Pattern.error(Pattern.java:1955)
-	at java.util.regex.Pattern.compile(Pattern.java:1700)
-	at java.util.regex.Pattern.&lt;init&gt;(Pattern.java:1351)
-	at java.util.regex.Pattern.compile(Pattern.java:1028)
-	at java.lang.String.split(String.java:2380)
-	at java.lang.String.split(String.java:2422)
-	at pv260.unittesting.BrokenSplitter.split(BrokenSplitter.java:10)
-	at pv260.unittesting.QuickcheckTest.testSplit(QuickcheckTest.java:18)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier$2.evaluate(PropertyVerifier.java:96)
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier$1.evaluate(PropertyVerifier.java:73)
-	... 24 more
 </failure>
     <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
 SLF4J: Defaulting to no-operation (NOP) logger implementation

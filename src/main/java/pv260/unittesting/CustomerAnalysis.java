@@ -32,13 +32,12 @@ public class CustomerAnalysis {
         this.errorHandler = errorHandler;
     }
 
-    public int calculateTotalCredit(String query, long productId) throws GeneralException {
-        if (query == null || !VALID_PARAM.matcher(query).matches()) {
-            throw new InvalidQueryException();
-        }
-        int totalCredit = 0;
+    public void prepareOfferForProduct(long productId) throws GeneralException {
+       
         Product prod = this.storage.find(Product.class, productId);
+        
         List<Customer> customers = this.findInterestingCustomers(prod);
+        
         for (Customer customer : customers) {
             try {
                 Offer offer = new Offer(customer, prod);
@@ -50,7 +49,7 @@ public class CustomerAnalysis {
                 this.errorHandler.handle(e);
             }
         }
-        return totalCredit;
+       
     }
 
     List<Customer> findInterestingCustomers(Product product) throws ServiceUnavailableException {

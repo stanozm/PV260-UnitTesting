@@ -1,13 +1,22 @@
 -------------------------------------------------------------------------------
 Test set: pv260.unittesting.QuickcheckTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.894 sec <<< FAILURE!
-testSplit(pv260.unittesting.QuickcheckTest)  Time elapsed: 5.08 sec  <<< FAILURE!
-java.lang.AssertionError: Unexpected error in property testSplit with args [)>H
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.036 sec <<< FAILURE!
+testSplit(pv260.unittesting.QuickcheckTest)  Time elapsed: 4.697 sec  <<< FAILURE!
+java.lang.AssertionError: Property testSplit falsified for args shrunken to [
 ]
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier.reportErrorWithArguments(PropertyVerifier.java:103)
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier.access$300(PropertyVerifier.java:40)
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier$1.evaluate(PropertyVerifier.java:80)
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at pv260.unittesting.QuickcheckTest.testSplit(QuickcheckTest.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at com.pholser.junit.quickcheck.runner.PropertyVerifier$2.evaluate(PropertyVerifier.java:96)
+	at com.pholser.junit.quickcheck.runner.PropertyVerifier$1.evaluate(PropertyVerifier.java:73)
 	at com.pholser.junit.quickcheck.runner.PropertyVerifier.verify(PropertyVerifier.java:65)
 	at com.pholser.junit.quickcheck.runner.PropertyStatement.verifyProperty(PropertyStatement.java:106)
 	at com.pholser.junit.quickcheck.runner.PropertyStatement.evaluate(PropertyStatement.java:92)
@@ -32,24 +41,4 @@ java.lang.AssertionError: Unexpected error in property testSplit with args [)>H
 	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-Caused by: java.util.regex.PatternSyntaxException: Unmatched closing ')'
-)
-	at java.util.regex.Pattern.error(Pattern.java:1955)
-	at java.util.regex.Pattern.compile(Pattern.java:1700)
-	at java.util.regex.Pattern.<init>(Pattern.java:1351)
-	at java.util.regex.Pattern.compile(Pattern.java:1028)
-	at java.lang.String.split(String.java:2380)
-	at java.lang.String.split(String.java:2422)
-	at pv260.unittesting.BrokenSplitter.split(BrokenSplitter.java:10)
-	at pv260.unittesting.QuickcheckTest.testSplit(QuickcheckTest.java:18)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:497)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier$2.evaluate(PropertyVerifier.java:96)
-	at com.pholser.junit.quickcheck.runner.PropertyVerifier$1.evaluate(PropertyVerifier.java:73)
-	... 24 more
 

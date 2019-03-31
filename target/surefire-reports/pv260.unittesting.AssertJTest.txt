@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: pv260.unittesting.AssertJTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.846 sec <<< FAILURE!
-testCollectionContains(pv260.unittesting.AssertJTest)  Time elapsed: 0.619 sec  <<< FAILURE!
+Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.746 sec <<< FAILURE!
+testCollectionContains(pv260.unittesting.AssertJTest)  Time elapsed: 0.512 sec  <<< FAILURE!
 org.assertj.core.api.SoftAssertionError: 
 The following 3 assertions failed:
 1) 
@@ -91,7 +91,7 @@ java.lang.AssertionError
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 
-testStringMatch(pv260.unittesting.AssertJTest)  Time elapsed: 0.142 sec  <<< FAILURE!
+testStringMatch(pv260.unittesting.AssertJTest)  Time elapsed: 0.129 sec  <<< FAILURE!
 org.assertj.core.api.SoftAssertionError: 
 The following 3 assertions failed:
 1) 
