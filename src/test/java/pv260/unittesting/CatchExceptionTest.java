@@ -3,6 +3,8 @@ package pv260.unittesting;
 import static com.googlecode.catchexception.CatchException.caughtException;
 import static com.googlecode.catchexception.CatchException.verifyException;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 import org.junit.Test;
 
 public class CatchExceptionTest {
@@ -43,4 +45,15 @@ public class CatchExceptionTest {
         }
     }
 
+    //JUnit 5 example
+    @Test
+    public void testExceptionInConstructor_JUnit() {
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            MyObject testedObject = new MyObject(INVALID_CTOR_ARG);;
+        });
+
+        String actualMessage = exception.getMessage();
+
+        assertThat(actualMessage.contains("ctor"));
+    }
 }
